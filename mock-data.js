@@ -1,133 +1,24 @@
-const CHANNELS = [
-    {
-        id: 'c1',
-        name: 'CodeMasters',
-        avatarUrl: 'https://i.pravatar.cc/150?u=c1',
-        bannerUrl: 'https://picsum.photos/seed/c1-banner/1280/280',
-        subscribers: '1.2M',
-        description: 'Your one-stop channel for learning web development. From HTML to advanced JavaScript frameworks, we cover it all. Join us and become a coding master!'
-    },
-    {
-        id: 'c2',
-        name: 'GourmetJourney',
-        avatarUrl: 'https://i.pravatar.cc/150?u=c2',
-        bannerUrl: 'https://picsum.photos/seed/c2-banner/1280/280',
-        subscribers: '850K',
-        description: 'Exploring the world one dish at a time. We bring you the best recipes, cooking techniques, and food stories from around the globe. Subscribe for a delicious journey!'
-    },
-    {
-        id: 'c3',
-        name: 'PixelPerfect',
-        avatarUrl: 'https://i.pravatar.cc/150?u=c3',
-        bannerUrl: 'https://picsum.photos/seed/c3-banner/1280/280',
-        subscribers: '2.5M',
-        description: 'Tutorials, tips, and inspiration for digital artists and designers. We cover everything from Photoshop and Illustrator to Procreate and Figma.'
-    },
-    {
-        id: 'c4',
-        name: 'TechUnboxed',
-        avatarUrl: 'https://i.pravatar.cc/150?u=c4',
-        bannerUrl: 'https://picsum.photos/seed/c4-banner/1280/280',
-        subscribers: '5.1M',
-        description: 'The latest and greatest in tech, unboxed and reviewed. We give you honest opinions on smartphones, laptops, gadgets, and more.'
-    }
+export const channels = [
+    { id: 1, name: 'TechVision', avatar: 'https://i.pravatar.cc/48?u=1', subscribers: '1.2M', banner: 'https://source.unsplash.com/1200x300/?technology,abstract' },
+    { id: 2, name: 'GamerGuild', avatar: 'https://i.pravatar.cc/48?u=2', subscribers: '850K', banner: 'https://source.unsplash.com/1200x300/?gaming,neon' },
+    { id: 3, name: 'FoodieFiesta', avatar: 'https://i.pravatar.cc/48?u=3', subscribers: '2.5M', banner: 'https://source.unsplash.com/1200x300/?food,cooking' },
+    { id: 4, name: 'TravelTrek', avatar: 'https://i.pravatar.cc/48?u=4', subscribers: '550K', banner: 'https://source.unsplash.com/1200x300/?travel,mountains' },
 ];
 
-const VIDEOS = [
-    {
-        id: 'v1',
-        title: 'Building a Modern Website with Tailwind CSS',
-        thumbnailUrl: 'https://picsum.photos/seed/v1/400/225',
-        duration: '18:24',
-        channelId: 'c1',
-        views: '150K',
-        likes: '8.1K',
-        uploadedAt: '2 weeks ago',
-        description: 'In this tutorial, we will build a beautiful, responsive landing page from scratch using Tailwind CSS. We will cover utility-first concepts, responsive design, and customizing your theme.'
-    },
-    {
-        id: 'v2',
-        title: 'The Perfect Sourdough Bread | Step-by-Step Guide',
-        thumbnailUrl: 'https://picsum.photos/seed/v2/400/225',
-        duration: '25:10',
-        channelId: 'c2',
-        views: '1.2M',
-        likes: '45K',
-        uploadedAt: '1 month ago',
-        description: 'Master the art of sourdough bread with our comprehensive guide. We will walk you through every step, from feeding your starter to getting that perfect crust and crumb.'
-    },
-    {
-        id: 'v3',
-        title: 'Creating Stunning Illustrations in Procreate',
-        thumbnailUrl: 'https://picsum.photos/seed/v3/400/225',
-        duration: '35:50',
-        channelId: 'c3',
-        views: '890K',
-        likes: '32K',
-        uploadedAt: '3 weeks ago',
-        description: 'Unlock your creativity with Procreate! This tutorial covers brushes, layers, color palettes, and advanced techniques to help you create professional-grade digital illustrations.'
-    },
-    {
-        id: 'v4',
-        title: 'The M2 MacBook Air Review: Almost Perfect!',
-        thumbnailUrl: 'https://picsum.photos/seed/v4/400/225',
-        duration: '15:05',
-        channelId: 'c4',
-        views: '3.1M',
-        likes: '150K',
-        uploadedAt: '1 week ago',
-        description: 'We have spent a month with the new M2 MacBook Air. Is it the best laptop for most people? We dive into performance, battery life, design, and its biggest pros and cons.'
-    },
-    {
-        id: 'v5',
-        title: 'JavaScript Promises in 10 Minutes',
-        thumbnailUrl: 'https://picsum.photos/seed/v5/400/225',
-        duration: '10:15',
-        channelId: 'c1',
-        views: '300K',
-        likes: '12K',
-        uploadedAt: '3 days ago',
-        description: 'Confused by asynchronous JavaScript? This quick tutorial breaks down Promises in a simple, easy-to-understand way. Learn .then(), .catch(), and .finally() with practical examples.'
-    },
-    {
-        id: 'v6',
-        title: 'Homemade Pasta from Scratch - 3 Simple Shapes',
-        thumbnailUrl: 'https://picsum.photos/seed/v6/400/225',
-        duration: '12:45',
-        channelId: 'c2',
-        views: '550K',
-        likes: '28K',
-        uploadedAt: '5 days ago',
-        description: 'Ditch the store-bought pasta! Learn how to make fresh, delicious pasta at home with just two ingredients. We will show you how to make three classic shapes: fettuccine, farfalle, and orecchiette.'
-    },
-    {
-        id: 'v7',
-        title: 'Figma Crash Course for Beginners 2024',
-        thumbnailUrl: 'https://picsum.photos/seed/v7/400/225',
-        duration: '45:00',
-        channelId: 'c3',
-        views: '1.1M',
-        likes: '50K',
-        uploadedAt: '2 months ago',
-        description: 'Everything you need to know to get started with Figma. This comprehensive crash course covers the interface, tools, prototyping, and collaboration features.'
-    },
-    {
-        id: 'v8',
-        title: 'The Ultimate Smart Home Tour 2024!',
-        thumbnailUrl: 'https://picsum.photos/seed/v8/400/225',
-        duration: '22:30',
-        channelId: 'c4',
-        views: '2.5M',
-        likes: '95K',
-        uploadedAt: '3 weeks ago',
-        description: 'Come take a tour of our fully automated smart home. We showcase the best smart lights, speakers, security cameras, and other gadgets that make life easier and more fun.'
-    }
+export const videos = [
+    { id: 1, title: 'The Future of AI: What to Expect in the Next 5 Years', thumbnail: 'https://source.unsplash.com/400x225/?ai,robot', channelId: 1, views: '2.1M', uploadDate: '2 weeks ago', duration: '15:30', description: 'A deep dive into the upcoming advancements in Artificial Intelligence.' },
+    { id: 2, title: 'Epic Gameplay Montage: The Best Moments of 2024', thumbnail: 'https://source.unsplash.com/400x225/?gaming,controller', channelId: 2, views: '5.3M', uploadDate: '1 week ago', duration: '10:15', description: 'Relive the most insane clutches, funniest fails, and biggest wins from the past year.' },
+    { id: 3, title: 'Making the Perfect Sourdough Bread at Home', thumbnail: 'https://source.unsplash.com/400x225/?bread,baking', channelId: 3, views: '8M', uploadDate: '1 month ago', duration: '25:00', description: 'A step-by-step guide to baking delicious artisan sourdough bread from scratch.' },
+    { id: 4, title: 'Backpacking Through the Swiss Alps: A Hiker\'s Guide', thumbnail: 'https://source.unsplash.com/400x225/?alps,hiking', channelId: 4, views: '1.1M', uploadDate: '3 weeks ago', duration: '18:45', description: 'Join us on an unforgettable journey through the breathtaking landscapes of the Swiss Alps.' },
+    { id: 5, title: 'Unboxing the Latest Flagship Smartphone', thumbnail: 'https://source.unsplash.com/400x225/?smartphone,tech', channelId: 1, views: '980K', uploadDate: '5 days ago', duration: '12:20', description: 'First impressions and a detailed look at the most anticipated phone of the year.' },
+    { id: 6, title: 'Speedrunning the New Indie Hit Platformer', thumbnail: 'https://source.unsplash.com/400x225/?pixel,game', channelId: 2, views: '750K', uploadDate: '2 days ago', duration: '22:10', description: 'Can we beat the world record? Watch this intense speedrun attempt!' },
+    { id: 7, title: '10-Minute Gourmet Pasta Recipe', thumbnail: 'https://source.unsplash.com/400x225/?pasta,food', channelId: 3, views: '4.2M', uploadDate: '3 days ago', duration: '11:05', description: 'A quick and easy recipe that tastes like it came from a five-star restaurant.' },
+    { id: 8, title: 'Hidden Gems of Kyoto, Japan', thumbnail: 'https://source.unsplash.com/400x225/?kyoto,japan', channelId: 4, views: '650K', uploadDate: '10 days ago', duration: '14:30', description: 'Explore the secret spots and local favorites in the beautiful city of Kyoto.' },
 ];
 
-const COMMENTS = [
-    { id: 'cm1', videoId: 'v1', channelId: 'c2', text: 'Great tutorial! Super clear and easy to follow.', likes: 150, timestamp: '1 week ago' },
-    { id: 'cm2', videoId: 'v1', channelId: 'c3', text: 'This completely changed how I approach my CSS. Thank you!', likes: 88, timestamp: '1 week ago' },
-    { id: 'cm3', videoId: 'v2', channelId: 'c1', text: 'My sourdough turned out amazing because of this video!', likes: 250, timestamp: '2 weeks ago' },
-    { id: 'cm4', videoId: 'v4', channelId: 'c1', text: 'Awesome review. Very balanced and informative.', likes: 400, timestamp: '3 days ago' },
-    { id: 'cm5', videoId: 'v4', channelId: 'c3', text: 'Thinking of getting this for my design work. Your review helped a lot!', likes: 120, timestamp: '2 days ago' }
+export const comments = [
+    { id: 1, videoId: 1, channelId: 2, comment: 'Mind-blowing stuff! The future is exciting.', likes: 1200, timestamp: '1 week ago' },
+    { id: 2, videoId: 1, channelId: 3, comment: 'Great overview. I learned so much.', likes: 850, timestamp: '1 week ago' },
+    { id: 3, videoId: 3, channelId: 1, comment: 'My bread came out perfectly! Thank you!', likes: 3500, timestamp: '2 weeks ago' },
+    { id: 4, videoId: 3, channelId: 4, comment: 'I could almost smell it through the screen. Looks delicious!', likes: 2100, timestamp: '2 weeks ago' },
 ];
