@@ -1,35 +1,21 @@
-// In a real application, you would initialize Firebase here.
-// This allows you to connect to services like Authentication, Firestore, and Storage.
+// This is a placeholder for your Firebase configuration.
+// To use Firebase, you would create a project in the Firebase console,
+// get your configuration object, and paste it here.
 
-/*
+// You would then import and initialize Firebase in your main.js file.
+// Example: import { initializeApp } from 'firebase/app';
 
-// 1. Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { getAuth } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
-
-// 2. Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "YOUR_API_KEY",
   authDomain: "YOUR_AUTH_DOMAIN",
   projectId: "YOUR_PROJECT_ID",
   storageBucket: "YOUR_STORAGE_BUCKET",
   messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID",
-  measurementId: "YOUR_MEASUREMENT_ID"
+  appId: "YOUR_APP_ID"
 };
 
-// 3. Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-const auth = getAuth(app);
-const db = getFirestore(app);
+// Initialize Firebase
+// const app = initializeApp(firebaseConfig);
 
-// 4. Export the services for use in other parts of your app
-export { auth, db };
-
-*/
-
-console.log('Firebase config loaded (mock).');
+// You can then export the app instance or specific Firebase services (like Firestore, Auth, etc.)
+// export default app;
