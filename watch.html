@@ -3,65 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VidHere - Watch</title>
+    <title>Watching - VidHere</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans">
+<body class="bg-gray-50 text-gray-900 font-sans">
 
-    <!-- Header -->
-    <header class="bg-white shadow-md sticky top-0 z-50 px-4 py-2 flex items-center justify-between">
-         <div class="flex items-center space-x-4">
-            <a href="index.html" class="flex items-center space-x-2">
-                <i class="fab fa-youtube text-3xl text-red-500"></i>
-                <h1 class="text-2xl font-bold tracking-tighter">VidHere</h1>
-            </a>
-        </div>
-        <div class="hidden md:flex flex-1 max-w-2xl mx-4">
-            <input type="text" placeholder="Search" class="w-full px-4 py-2 border border-gray-300 rounded-l-full focus:outline-none focus:ring-2 focus:ring-blue-500">
-            <button class="bg-gray-200 px-6 py-2 border border-gray-300 border-l-0 rounded-r-full hover:bg-gray-300">
-                <i class="fas fa-search text-gray-600"></i>
-            </button>
-        </div>
-        <div class="flex items-center space-x-4">
-            <a href="upload.html" class="text-gray-600 hover:text-gray-900">
-                <i class="fas fa-video text-2xl"></i>
-            </a>
-            <a href="#" class="text-gray-600 hover:text-gray-900">
-                <i class="fas fa-bell text-2xl"></i>
-            </a>
-            <a href="login.html">
-                <img src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="User Avatar" class="w-8 h-8 rounded-full cursor-pointer">
-            </a>
-        </div>
-    </header>
+    <div id="app-container" class="flex flex-col min-h-screen">
+        <!-- Header -->
+        <header id="app-header" class="bg-white/80 backdrop-blur-md border-b border-gray-200 sticky top-0 z-50 px-4 py-2 flex items-center justify-between">
+        </header>
 
-    <!-- Main Content -->
-    <main class="flex flex-col lg:flex-row gap-6 p-4 md:p-6 lg:p-8 max-w-screen-2xl mx-auto">
+        <!-- Main Content -->
+        <main id="watch-page-content" class="flex-grow p-4 md:px-6 lg:px-8">
+            <!-- Watch page content will be injected here -->
+        </main>
+    </div>
 
-        <!-- Video Player and Details -->
-        <div class="lg:w-2/3 w-full">
-            <div id="video-player-container"></div>
-            <div id="video-details-container" class="mt-4"></div>
-            <hr class="my-4 border-gray-300">
-            <!-- Comments Section -->
-            <div id="comments-container" class="mt-6"></div>
-        </div>
+    <a href="https://seron.dev" target="_blank" class="fixed bottom-4 right-4 bg-blue-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg hover:bg-blue-700 transition-colors z-50">
+        Made by Seron
+    </a>
 
-        <!-- Recommended Videos -->
-        <aside class="lg:w-1/3 w-full">
-            <h2 class="text-lg font-semibold mb-4">Up next</h2>
-            <div id="recommended-videos-container" class="space-y-4"></div>
-        </aside>
-
-    </main>
-
-    <a href="https://seron.dev" target="_blank" class="fixed bottom-4 right-4 bg-blue-600 text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-lg hover:bg-blue-700 transition-colors">Made by Seron</a>
-
-    <script src="js/mock-data.js"></script>
-    <script src="js/ui.js"></script>
-    <script src="js/app.js"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>
