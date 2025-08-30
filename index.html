@@ -3,53 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VidHere - Home</title>
+    <title>VidHere - Your Video Hub</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans">
+<body class="bg-gray-50 text-gray-900 font-sans">
 
-    <!-- Header -->
-    <header class="bg-white shadow-md sticky top-0 z-50 px-4 py-2 flex items-center justify-between">
-        <div class="flex items-center space-x-4">
-            <i class="fas fa-bars text-xl text-gray-600 md:hidden"></i>
-            <a href="/" class="flex items-center space-x-2">
-                <i class="fab fa-youtube text-3xl text-red-500"></i>
-                <h1 class="text-2xl font-bold tracking-tighter">VidHere</h1>
-            </a>
-        </div>
-        <div class="hidden md:flex flex-1 max-w-2xl mx-4">
-            <input type="text" placeholder="Search" class="w-full px-4 py-2 border border-gray-300 rounded-l-full focus:outline-none focus:ring-2 focus:ring-blue-500">
-            <button class="bg-gray-200 px-6 py-2 border border-gray-300 border-l-0 rounded-r-full hover:bg-gray-300">
-                <i class="fas fa-search text-gray-600"></i>
-            </button>
-        </div>
-        <div class="flex items-center space-x-4">
-            <a href="upload.html" class="text-gray-600 hover:text-gray-900">
-                <i class="fas fa-video text-2xl"></i>
-            </a>
-            <a href="#" class="text-gray-600 hover:text-gray-900">
-                <i class="fas fa-bell text-2xl"></i>
-            </a>
-            <a href="login.html">
-                <img src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="User Avatar" class="w-8 h-8 rounded-full cursor-pointer">
-            </a>
-        </div>
-    </header>
+    <div id="app-container" class="flex flex-col min-h-screen">
+        <!-- Header -->
+        <header id="app-header" class="bg-white/80 backdrop-blur-md border-b border-gray-200 sticky top-0 z-50 px-4 py-2 flex items-center justify-between">
+        </header>
 
-    <!-- Main Content -->
-    <main class="p-4 md:p-6 lg:p-8">
-        <div id="video-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-8">
-            <!-- Video cards will be injected here by JavaScript -->
-        </div>
-    </main>
+        <!-- Main Content -->
+        <main class="flex-grow p-4 md:px-6 lg:px-8">
+            <div id="video-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-x-4 gap-y-8">
+                <!-- Video cards will be injected here by JavaScript -->
+            </div>
+        </main>
+    </div>
 
-    <a href="https://seron.dev" target="_blank" class="fixed bottom-4 right-4 bg-blue-600 text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-lg hover:bg-blue-700 transition-colors">Made by Seron</a>
+    <a href="https://seron.dev" target="_blank" class="fixed bottom-4 right-4 bg-blue-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg hover:bg-blue-700 transition-colors z-50">
+        Made by Seron
+    </a>
 
-    <script src="js/mock-data.js"></script>
-    <script src="js/ui.js"></script>
-    <script src="js/app.js"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>
